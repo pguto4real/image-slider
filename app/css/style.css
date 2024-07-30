@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/bad-boys.jpg);
+    transition: all 0.5s ease-in-out;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7)  ;
+    z-index: -1;
+
+}
+
+.slider__container{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)  0 3px 6px  rgba(0, 0, 0, 0.23)  ;
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+}
+
+.slide{
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+     background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15vh;
+    left: -15vw;   
+    z-index: 5; 
+    transform: translateX(-25%);
+    transition: all 1s ease-in;
+}
+.slide.active{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.arrow{
+    position: fixed;
+    background: #ddd;
+    color: #111;
+    padding: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 5px;
+/* z-index: -1; */
+}
+.arrow i{
+    font-size: 1.5rem;
+}
+
+.arrow:focus{
+    outline: none;
+}
+
+.left__arrow{
+    left: calc(15vw - 65px);
+}
+
+
+.right__arrow{
+    right: calc(15vw - 65px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
